@@ -8,6 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(244, 230, 214);
 }
 
 code {
@@ -50,4 +51,16 @@ img {
 input,
 textarea {
   outline: none;
+}
+
+section{
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 20px;
 }
