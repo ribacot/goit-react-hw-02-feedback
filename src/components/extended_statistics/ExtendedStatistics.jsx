@@ -1,6 +1,6 @@
 export default function ExtendedStatistics({ total, percentag }) {
   const totalEl = total();
-  const percentagEl = Math.round(percentag());
+  const percentagEl = percentag();
   return (
     <>
       <li>Total: {totalEl} </li>
