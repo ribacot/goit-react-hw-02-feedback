@@ -11,7 +11,7 @@ export class App extends React.Component {
     bad: 0,
   };
 
-  increementFeedback = name =>
+  incrementFeedback = name =>
     this.setState(prevState => ({
       [name]: prevState[name] + 1,
     }));
@@ -30,7 +30,7 @@ export class App extends React.Component {
         <Section title="Please leave feedback">
           <ButtonFeedback
             stateValue={this.state}
-            click={this.increementFeedback}
+            click={this.incrementFeedback}
           ></ButtonFeedback>
         </Section>
         <Section title="Statistics">
