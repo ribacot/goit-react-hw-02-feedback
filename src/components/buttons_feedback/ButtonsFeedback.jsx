@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import capitalize from 'lodash.capitalize';
 import css from './ButtonsFeedback.module.css';
 
-export default function ButtonFeedback({ stateValue, click }) {
+export default function ButtonFeedback({ stateValue, onClick }) {
   const btnNames = Object.keys(stateValue);
 
   return (
@@ -12,7 +13,7 @@ export default function ButtonFeedback({ stateValue, click }) {
             <button
               className={`${css.button} ${css[name]}`}
               type="button"
-              onClick={() => click(name)}
+              onClick={() => onClick(name)}
             >
               {capitalize(name)}
             </button>
@@ -22,3 +23,8 @@ export default function ButtonFeedback({ stateValue, click }) {
     </ul>
   );
 }
+
+ButtonFeedback.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  stateValue: PropTypes.objectOf(PropTypes.number).isRequired,
+};

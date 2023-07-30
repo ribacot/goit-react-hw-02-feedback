@@ -30,7 +30,7 @@ export class App extends React.Component {
         <Section title="Please leave feedback">
           <ButtonFeedback
             stateValue={this.state}
-            click={this.incrementFeedback}
+            onClick={this.incrementFeedback}
           ></ButtonFeedback>
         </Section>
         <Section title="Statistics">

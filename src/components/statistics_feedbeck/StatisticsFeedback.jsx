@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import capitalize from 'lodash.capitalize';
 import css from './StatisticsFeedback.module.css';
 
@@ -21,3 +22,8 @@ export default function StatisticsFeedback({ stateValue, children }) {
     <p>There is no feedback</p>
   );
 }
+
+StatisticsFeedback.propTypes = {
+  stateValue: PropTypes.objectOf(PropTypes.number.isRequired).isRequired,
+  children: PropTypes.node,
+};

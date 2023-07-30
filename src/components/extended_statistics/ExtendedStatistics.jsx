@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function ExtendedStatistics({ total, percentag }) {
   const totalEl = total();
   const percentagEl = percentag();
@@ -8,3 +10,8 @@ export default function ExtendedStatistics({ total, percentag }) {
     </>
   );
 }
+
+ExtendedStatistics.propTypes = {
+  total: PropTypes.func.isRequired,
+  percentag: PropTypes.func.isRequired,
+};
